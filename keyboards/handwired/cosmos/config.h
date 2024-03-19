@@ -3,6 +3,9 @@
 
 #pragma once
 
+#define MASTER_LEFT
+
+
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
