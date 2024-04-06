@@ -5,3 +5,4 @@ VIAL_ENABLE = yes
 SERIAL_DRIVER = vendor
 SPLIT_KEYBOARD = yes
 OLED_ENABLE = yes
+WPM_ENABLE = yes
