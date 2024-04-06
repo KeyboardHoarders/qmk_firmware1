@@ -3,7 +3,7 @@
 
 #pragma once
 
-/*
+/*/
  * Feature disable options
  *  These options are also useful to firmware size reduction.
  */
