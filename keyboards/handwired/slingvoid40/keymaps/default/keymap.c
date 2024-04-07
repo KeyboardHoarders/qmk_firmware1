@@ -11,6 +11,31 @@ enum planck_layers {
     _NAVIGATE,
 };
 
+
+enum combos {
+  AB_ESC,
+  JK_TAB,
+  QW_SFT,
+  DL_DEL
+};
+
+const uint16_t PROGMEM ab_combo[] = {KC_A, KC_B, COMBO_END};
+const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM dl_combo[] = {KC_D, KC_L, COMBO_END};
+
+combo_t key_combos[] = {
+  [AB_ESC] = COMBO(ab_combo, KC_ESC),
+  [JK_TAB] = COMBO(jk_combo, KC_TAB),
+  [QW_SFT] = COMBO(qw_combo, KC_LSFT),
+  [DL_DEL] = COMBO(dl_combo, KC_DEL),
+};
+
+
+#define HW_ALT     LALT_T(KC_Z)
+#define HW_GUI     LGUI_T(KC_X)
+#define HW_CTL     LCTL_T(KC_C)
+#define HW_SFT     LSFT_T(KC_V)
 #define CTRL_ESC   LCTL_T(KC_ESC)
 #define CTRL_LEFT  LCTL(KC_LEFT)
 #define CTRL_RGHT  LCTL(KC_RIGHT)
@@ -70,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  KC_F11,   KC_F12,   KC_F13,   KC_F14,   KC_F15,   KC_F16,   KC_F17,   KC_F18,   KC_F19,   KC_F20,   _______,
     _______,  S(KC_1),  S(KC_2),  S(KC_3),  S(KC_4),  S(KC_5),  S(KC_6),  S(KC_7),  S(KC_8),  S(KC_9),  S(KC_0),  _______,
     _______,  KC_UNDS,  KC_PLUS,  KC_TILDE, KC_PIPE,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______
+    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  QK_BOOT
 ),
 /* Adjust (Number + Symbol): keyboard settings and other keys that should not accidentally be hit
  * ,-----------------------------------------------------------------------------------------------------------------------.
