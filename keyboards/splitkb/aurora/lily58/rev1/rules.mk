@@ -15,3 +15,6 @@
 
 # Although no rules are defined,
 # presence of this file is required for QMK to compile it.
+RGB_MATRIX_ENABLE = no
+RGBLIGHT_ENABLE = yes
+OLED_ENABLE = yes

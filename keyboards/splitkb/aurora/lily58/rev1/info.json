@@ -1,8 +1,11 @@
 {
     "keyboard_name": "Aurora Lily58 rev1",
+    "bootloader": "caterina",
+    "processor": "atmega32u4",
     "usb": {
         "pid": "0xB4C2"
     },
+    
     "features": {
         "mousekey": true,
         "bootmagic": true,
@@ -114,9 +117,9 @@
         }
     },
     "rgblight": {
-        "led_count": 68,
+        "led_count": 70,
         "split": true,
-        "split_count": [34, 34],
+        "split_count": [35, 35],
         "max_brightness": 128
     },
     "ws2812": {
@@ -130,6 +133,7 @@
             {"flags": 2, "x": 22, "y": 53},                    // L RGB3
             {"flags": 2, "x": 58, "y": 60},                    // L RGB4
             {"flags": 2, "x": 87, "y": 56},                    // L RGB5
+            {"flags": 2, "x": 97, "y": 46},                    // L RGB6
             {"flags": 4, "matrix": [0, 0], "x": 0, "y": 8},    // L SW01
             {"flags": 4, "matrix": [0, 1], "x": 14, "y": 6},   // L SW02
             {"flags": 4, "matrix": [0, 2], "x": 29, "y": 2},   // L SW03
@@ -164,6 +168,7 @@
             {"flags": 2, "x": 202, "y": 53},                   // R RGB3
             {"flags": 2, "x": 166, "y": 60},                   // R RGB4
             {"flags": 2, "x": 137, "y": 56},                   // R RGB5
+            {"flags": 2, "x": 117, "y": 46},                   // R RGB6
             {"flags": 4, "matrix": [5, 5], "x": 152, "y": 4},  // R SW06
             {"flags": 4, "matrix": [5, 4], "x": 166, "y": 2},  // R SW05
             {"flags": 4, "matrix": [5, 3], "x": 181, "y": 0},  // R SW04
