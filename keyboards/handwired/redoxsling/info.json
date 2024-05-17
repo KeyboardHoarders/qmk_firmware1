@@ -18,10 +18,10 @@
     },
     "split": {
         "enabled": true
-        "soft_serial_pin": "GP11"
+        "soft_serial_pin": "GP29"
     },
     "ws2812": {
-        "pin": "GP29"
+        "pin": "GP11"
     },
     "rgblight": {
         "split_count": [7, 7]
