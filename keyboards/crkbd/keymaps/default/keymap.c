@@ -25,19 +25,22 @@ enum combos {
   AB_ESC,
   JK_BACKSHIFT,
   QW_SFT,
-  DL_DEL
+  DL_DEL,
+  MN_MIN
 };
 
 const uint16_t PROGMEM ab_combo[] = {KC_A, KC_B, COMBO_END};
 const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM dl_combo[] = {KC_D, KC_L, COMBO_END};
+const uint16_t PROGMEM mn_combo[] = {KC_H, KC_N, COMBO_END};
 
 combo_t key_combos[] = {
   [AB_ESC] = COMBO(ab_combo, KC_ESC),
   [JK_BACKSHIFT] = COMBO(jk_combo, KC_BSPC),
   [QW_SFT] = COMBO(qw_combo, KC_LSFT),
   [DL_DEL] = COMBO(dl_combo, KC_DEL),
+  [MN_MIN] = COMBO(mn_combo, KC_MINS)
 };
 
 
@@ -72,9 +75,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,  KC_GRV,
+      KC_LSFT, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, XXXXXXX,                      KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,  KC_GRV,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
+      KC_LCTL, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI,   MO(3),  KC_SPC,     KC_ENT, _______, KC_RALT
                                       //`--------------------------'  `--------------------------'
