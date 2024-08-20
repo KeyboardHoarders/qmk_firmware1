@@ -27,6 +27,8 @@
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
+
+#define DEBOUNCE 10
 #define CUSTOM_FONT
 
 #define CUSTOM_LAYER_READ //if you remove this it causes issues - needs better guarding
@@ -70,7 +72,7 @@
 
     #define RGBLIGHT_LED_COUNT 70
 	//#define RGBLED_SPLIT
-	#define RGBLED_SPLIT { 35, 35 } // haven't figured out how to use this yet
+//	#define RGBLED_SPLIT { 35, 35 } // haven't figured out how to use this yet
 
 	//#define RGBLIGHT_LED_COUNT 30
     #define RGBLIGHT_LIMIT_VAL 120
@@ -86,7 +88,7 @@
 #   define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 // #   define RGB_MATRIX_LED_PROCESS_LIMIT (RGB_MATRIX_LED_COUNT + 4) / 5 // limits the number of LEDs to process in an animation per task run (increases keyboard responsiveness)
 // #   define RGB_MATRIX_LED_FLUSH_LIMIT 16 // limits in milliseconds how frequently an animation will update the LEDs. 16 (16ms) is equivalent to limiting to 60fps (increases keyboard responsiveness)
-#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 150 // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
+#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 255 // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
 
 #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_GRADIENT_LEFT_RIGHT
 
@@ -102,8 +104,8 @@
  // #   undef ENABLE_RGB_MATRIX_BREATHING
  // #   undef ENABLE_RGB_MATRIX_CYCLE_ALL
  // #   undef ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
- // #   undef ENABLE_RGB_MATRIX_CYCLE_UP_DOWN
- // #   undef ENABLE_RGB_MATRIX_CYCLE_OUT_IN
+ #   undef ENABLE_RGB_MATRIX_CYCLE_UP_DOWN
+ #   undef ENABLE_RGB_MATRIX_CYCLE_OUT_IN
  // #   undef ENABLE_RGB_MATRIX_CYCLE_OUT_IN_DUAL
  // #   undef ENABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON
  // #   undef ENABLE_RGB_MATRIX_DUAL_BEACON
